@@ -1,0 +1,111 @@
+/*Controls overall colour scheme of the site*/
+body {
+  background-image: linear-gradient(to right, #bcf0f7, #4881c7);
+  background-repeat: repeat-y;
+}
+#headerBox {
+  border: 0.3em solid #000000;
+}
+.pictures h2 {
+  color: #ff002b;
+}
+/* Adds a navigation bar*/
+.button {
+  background-color: #4CAF50; /* Green */
+  border: none;
+  color: Green;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+}
+
+li{
+  float: left;
+  padding: 8px;
+  /* adds a grey border to all list items execpt last-child*/
+  border-right: 1px solid #bbb;
+}
+
+li:last-child{
+  border-right: none;
+}
+
+li a{
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+    /* Change the link color to #111 (black) when mouse hovers */
+li a:hover{
+    background-color: #111;
+}
+
+ul{
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
+      /*fixes the nav bar at the top*/
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
+
+      /*adds active tab colour*/
+.active{
+  background-color: #04AA6D;
+}
+
+      /*This is for the image gallery*/
+div.gallery {
+  border: 1px solid #ccc;
+}
+
+div.gallery:hover {
+  border: 1px solid #777;
+}
+
+div.gallery img {
+  width: 100%;
+  height: auto;
+}
+
+div.desc {
+  padding: 15px;
+  text-align: center;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.responsive {
+  padding: 0 6px;
+  float: left;
+  width: 24.99999%;
+}
+
+@media only screen and (max-width: 700px) {
+  .responsive {
+    width: 49.99999%;
+    margin: 6px 0;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .responsive {
+    width: 100%;
+  }
+}
+
+.clearfix:after {
+  content: "";
+  display: table;
+  clear: both;
+}
