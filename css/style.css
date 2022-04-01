@@ -1,14 +1,31 @@
-/*Controls overall colour scheme of the site*/
+/*Anything here controls the headings, paragraphs etc, for index. NOT THE BACKGROUND AND NAV BAR!*/
+.indexHeading h1 {
+  color: #02522e;
+  text-shadow: 0.06em 0.06em 0.1em #001a0e;
+}
+#content .pictures {
+  margin-top: 0.5em;
+  border: 0.3em solid #000000;
+}
+#content .pictures .alfa {
+margin-top: 0.5em;
+margin-left: 0.3em;
+}
+#content .pictures .porsche {
+margin-top: 0.5em;
+margin-left: 0.3em;
+}
+
+/*Controls overall colour and font scheme of the site*/
 body {
   background-image: linear-gradient(to right, #bcf0f7, #4881c7);
   background-repeat: repeat-y;
 }
-#headerBox {
+#content .indexHeading {
+    font-family: 'Lucida Handwriting', cursive, 'Times New Roman', serif;
   border: 0.3em solid #000000;
 }
-.pictures h2 {
-  color: #ff002b;
-}
+
 /* Adds a navigation bar*/
 .button {
   background-color: #4CAF50; /* Green */
