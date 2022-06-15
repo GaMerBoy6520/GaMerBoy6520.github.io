@@ -9,6 +9,9 @@
 .bsaber {
   text-align: center;
 }
+.paragraph .old {
+  text-decoration: line-through;
+}
 .indexHeading h1 {
   text-align: center;
   color: #02522e;
