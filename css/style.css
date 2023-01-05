@@ -3,12 +3,12 @@
   box-sizing: border-box;
 }
 #content {
+  padding-left: 30px;
+  padding-top: 10px;
   margin: auto;
   width: 500px;
 }
-.bsaber {
-  text-align: center;
-}
+
 .paragraph .old {
   text-decoration: line-through;
 }
@@ -31,7 +31,7 @@ h2{
 }
 
 .segment img {
-  max-width: 300px;
+  max-width: 250px;
   margin-bottom: 5px;
 }
 
@@ -48,9 +48,17 @@ h2{
 .paragraph {
   margin: 5em 0em 0em 0em;
 }
-.videos {
-  text-align: center;
-  margin: 5em 0em 0em 0em;
+
+.gamechanges {
+  padding-left: 90px;
+}
+
+.webchanges {
+  padding-left: 90px;
+}
+
+.gallery {
+  padding-left: 90px;
 }
 
 /*Controls overall colour and font scheme of the site*/
@@ -62,161 +70,186 @@ body {
     font-family: 'Lucida Handwriting', cursive, 'Times New Roman', serif;
 }
 
-/* Adds a navigation bar*/
-/*Topnav beatsaber dropdown*/
-.topnav {
-  overflow: hidden;
-  background-color: #333;
-}
-
-.topnav a {
-  float: left;
+/* style for navbar */
+:root {
   font-size: 16px;
-  color: white;
-  text-align: center;
-  padding: 14px 16px;
-  text-decoration: none;
+  font-family: 'Open Sans';
+  --text-primary: #b6b6b6;
+  --text-secondary: #ececec;
+  --bg-primary: #23232e;
+  --bg-secondary: #141418;
+  --transition-speed: 600ms;
 }
 
-.dropdown {
-  float: left;
-  overflow: hidden;
-}
-
-.dropdown .dropbtn {
-  font-size: 17px;
-  border: none;
-  outline: none;
-  color: #ff00aa;
-  padding: 14px 16px;
-  background-color: inherit;
-  font-family: inherit;
-  margin: 0;
-}
-
-.topnav a:hover, .dropdown:hover .dropbtn {
-  color: #000000;
-  background-color: #26bfa1;
-  cursor: wait;
-}
-
-.dropdown-content {
-  display: none;
-  position: absolute;
-  background-color: #f9f9f9;
-  min-width: 160px;
-  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-  z-index: 1;
-}
-
-.dropdown-content a {
-  float: none;
+body {
   color: black;
-  padding: 12px 16px;
-  text-decoration: none;
-  display: block;
-  text-align: left;
+  background-color: white;
+  margin: 0;
+  padding: 0;
 }
 
-.dropdown-content a:hover {
-  background-color: #ddd;
+body::-webkit-scrollbar {
+  width: 0.25rem;
 }
 
-.dropdown:hover .dropdown-content {
-  display: block;
-}
-/* Add a black background color to the top navigation */
-.topnav {
- background-color: #222e5c;
- overflow: hidden;
+body::-webkit-scrollbar-track {
+  background: #1e1e24;
 }
 
-/* Style the links inside the navigation bar */
-.topnav a {
- float: left;
- display: block;
- color: #ff00aa;
- text-align: center;
- padding: 14px 16px;
- text-decoration: none;
- font-size: 17px;
+body::-webkit-scrollbar-thumb {
+  background: #6649b8;
 }
 
-/* Change the color of links on hover */
-.topnav a:hover {
- background-color: #26bfa1;
- color: black;
- cursor: wait;
+main {
+  margin-left: 5rem;
+  padding: 1rem;
 }
 
-/* Add an active class to highlight the current page */
-.topnav a.active {
- background-color: #04AA6D;
- color: white;
+.navbar {
+  position: fixed;
+  background-color: var(--bg-primary); 
+  width: 5rem;
+  height: 100vh;
+  transition: width 600ms ease;
 }
 
-/* Hide the link that should open and close the topnav on small screens */
-.topnav .icon {
- display: none;
+.navbar-nav {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100%;
 }
 
-/* Hide the link that should open and close the topnav on small screens */
-.topnav .icon {
- display: none;
-}
-
-/* The "responsive" class is added to the topnav with JavaScript when the user clicks on the icon. This class makes the topnav look good on small screens (display the links vertically instead of horizontally) */
-@media screen and (max-width: 600px) {
-  .topnav a:not(:first-child) {display: none;}
-  .topnav a.icon {
-    float: right;
-    display: block;
-  }
- .topnav.responsive {position: relative;}
- .topnav.responsive a.icon {
-   position: absolute;
-   right: 0;
-   top: 0;
- }
- .topnav.responsive a {
-   float: none;
-   display: block;
-   text-align: left;
- }
- .segment{
-   margin: 0px;
-   width: 67%;
- }
- html, body {
-   padding: 0px;
-   margin: 0px;
- }
-}
-      /*beat Saber Videos*/
-.bsaber a {
-  text-decoration: none;
-}
-.segment h1 {
-  text-align: center;
-}
-      /*This is for the image gallery*/
-div.gallery {
-  margin: 5px;
-  border: 3px solid #000000;
-  float: left;
-  width: 466px;
-}
-
-div.gallery:hover {
-  border: 1px solid #777;
-}
-
-div.gallery img {
+.nav-item {
   width: 100%;
-  height: auto;
 }
 
-div.desc {
-  padding: 15px;
+.nav-item:last-child {
+  margin-top: auto;
+}
+
+.navbar:hover {
+  width: 16rem;
+}
+
+.nav-link {
+  display: flex;
+  align-items: center;
+  height: 5rem;
+  color: var(--text-primary);
+  text-decoration: none;
+  filter: grayscale(100%) opacity(0.7);
+  transition: var(--transition-speed);
+}
+
+.nav-link:hover {
+  filter: grayscale(0%) opacity(1);
+  background: var(--bg-secondary);
+  color: var(--text-secondary);
+}
+
+.link-text {
+  display: none;
+  margin-left: 1rem;
+}
+
+.nav-link svg {
+  width: 2rem;
+  min-width: 2rem;
+  margin: 0 1.5rem;
+}
+
+.fa-primary {
+  color: #ff7eee;
+}
+
+.fa-secondary {
+  color: #df49a6;
+}
+
+.fa-primary,
+.fa-secondary {
+  transition: var(--transition-speed);
+}
+
+.logo {
+  font-weight: bold;
+  text-transform: uppercase;
+  margin-bottom: 1rem;
   text-align: center;
+  color: var(--text-secondary);
+  background: var(--bg-secondary);
+  font-size: 1.5rem;
+  text-transform: uppercase;
+  letter-spacing: 0.3ch;
+  width: 100%;
+}
+
+.logo svg {
+  transform: rotate(0deg);
+  transition: var(--transition-speed);
+}
+
+.logo-text
+{
+  display: inline;
+  position: absolute;
+  left: -999px;
+  transition: var(--transition-speed);
+}
+
+.navbar:hover .logo svg {
+  transform: rotate(-180deg);
+}
+
+/* Small screens */
+@media only screen and (max-width: 600px) {
+  .navbar {
+    bottom: 0;
+    width: 100vw;
+    height: 5rem;
+  }
+
+  .logo {
+    display: none;
+  }
+
+  .navbar-nav {
+    flex-direction: row;
+  }
+
+  .nav-link {
+    justify-content: center;
+  }
+
+  main {
+    margin: 0;
+  }
+}
+
+/* Large screens */
+@media only screen and (min-width: 600px) {
+  .navbar {
+    top: 0;
+    width: 5rem;
+    height: 100vh;
+  }
+
+
+  .navbar:hover .link-text {
+    display: inline;
+  }
+
+  .navbar:hover .logo svg
+  {
+    margin-left: 11rem;
+  }
+
+  .navbar:hover .logo-text
+  {
+    left: 0px;
+  }
 }

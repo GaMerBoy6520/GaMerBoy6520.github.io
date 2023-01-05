@@ -8,26 +8,71 @@
     <title>Images</title>
   </head>
   <body>
-    <div class="topnav" id="myTopnav">
-      <a href="index.html">Home</a>
-      <a href="playgame.html">Play The Game</a>
-      <a href="imgGallery.html" class="active">Image Gallery</a>
-      <a href="changelog.html">Changelog</a>
-      <a href="javascript:void(0);" class="icon" onclick="myFunction()">
-        <i class="fa fa-bars">☰</i>
-      </a>
-        <div class="dropdown">
-          <button class="dropbtn" name="button">Videos
-            <i class="fa fa-caret-down"></i>
-          </button>
-          <div class="dropdown-content">
-            <a href="videos/beat.html">My songs</a>
-            <a href="videos/billie.html">Billie Eilish</a>
-            <a href="videos/fob.html">Fall Out Boy</a>
-            <a href="videos/ost.html">Ost Songs</a>
-          </div>
-        </div>
-      </div>
+    <!-- Creates the navbar -->
+  <nav class="navbar">
+    <ul class="navbar-nav">
+      <li class="logo">
+        <a href="index.html" class="nav-link">
+          <span class="link-text logo-text">Home</span>
+          <svg
+            aria-hidden="true"
+            focusable="false"
+            data-prefix="fad"
+            data-icon="angle-double-right"
+            role="img"
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 448 512"
+            class="svg-inline--fa fa-angle-double-right fa-w-14 fa-5x"
+          >
+            <g class="fa-group">
+              <path
+                fill="currentColor"
+                d="M224 273L88.37 409a23.78 23.78 0 0 1-33.8 0L32 386.36a23.94 23.94 0 0 1 0-33.89l96.13-96.37L32 159.73a23.94 23.94 0 0 1 0-33.89l22.44-22.79a23.78 23.78 0 0 1 33.8 0L223.88 239a23.94 23.94 0 0 1 .1 34z"
+                class="fa-secondary"
+              ></path>
+              <path
+                fill="currentColor"
+                d="M415.89 273L280.34 409a23.77 23.77 0 0 1-33.79 0L224 386.26a23.94 23.94 0 0 1 0-33.89L320.11 256l-96-96.47a23.94 23.94 0 0 1 0-33.89l22.52-22.59a23.77 23.77 0 0 1 33.79 0L416 239a24 24 0 0 1-.11 34z"
+                class="fa-primary"
+              ></path>
+            </g>
+          </svg>
+        </a>
+      </li>
+
+    <li class="nav-item">
+        <a href="#" class="nav-link">
+          <span class="link-text">Image Gallery</span>
+          <svg 
+            xmlns="http://www.w3.org/2000/svg" 
+            viewBox="0 0 512 512">
+            <path d="M0 96C0 60.7 28.7 32 64 32H448c35.3 0 64 28.7 64 64V416c0 35.3-28.7 64-64 64H64c-35.3 0-64-28.7-64-64V96zM323.8 202.5c-4.5-6.6-11.9-10.5-19.8-10.5s-15.4 3.9-19.8 10.5l-87 127.6L170.7 297c-4.6-5.7-11.5-9-18.7-9s-14.2 3.3-18.7 9l-64 80c-5.8 7.2-6.9 17.1-2.9 25.4s12.4 13.6 21.6 13.6h96 32H424c8.9 0 17.1-4.9 21.2-12.8s3.6-17.4-1.4-24.7l-120-176zM112 192c26.5 0 48-21.5 48-48s-21.5-48-48-48s-48 21.5-48 48s21.5 48 48 48z"/>
+          </svg>
+        </a>
+    </li>
+
+    <a href="changelog.html" class="nav-link">
+      <span class="link-text">Changelog</span>
+      <svg 
+        xmlns="http://www.w3.org/2000/svg" 
+        viewBox="0 0 576 512">
+        <path d="M290.7 57.4L57.4 290.7c-25 25-25 65.5 0 90.5l80 80c12 12 28.3 18.7 45.3 18.7H288h9.4H512c17.7 0 32-14.3 32-32s-14.3-32-32-32H387.9L518.6 285.3c25-25 25-65.5 0-90.5L381.3 57.4c-25-25-65.5-25-90.5 0zM297.4 416H288l-105.4 0-80-80L227.3 211.3 364.7 348.7 297.4 416z"/>
+      </svg>
+    </a>
+
+    <a href="music.html" class="nav-link">
+      <span class="link-text">Music</span>
+      <svg 
+        xmlns="http://www.w3.org/2000/svg" 
+        viewBox="0 0 512 512">
+        <path d="M499.1 6.3c8.1 6 12.9 15.6 12.9 25.7v72V368c0 44.2-43 80-96 80s-96-35.8-96-80s43-80 96-80c11.2 0 22 1.6 32 4.6V147L192 223.8V432c0 44.2-43 80-96 80s-96-35.8-96-80s43-80 96-80c11.2 0 22 1.6 32 4.6V200 128c0-14.1 9.3-26.6 22.8-30.7l320-96c9.7-2.9 20.2-1.1 28.3 5z"/>
+      </svg>
+    </a>
+
+    </ul>
+  </nav>
+
+
     <div class="responsive">
 
     <div class="gallery">
